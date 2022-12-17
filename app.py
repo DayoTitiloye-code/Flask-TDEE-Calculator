@@ -38,11 +38,11 @@ def result():
         print(bmr)
     return render_template('base.html', form_data = form_data), 200
 
-@app.errorrhandler(exceptions.NotFound)
+@app.errorhandler(exceptions.NotFound)
 def handle_404(err):
     return jsonify({"message": f"Sorry... {err}"}), 404
 
-@app.errorrhandler(exceptions.InternalServerError)
+@app.errorhandler(exceptions.InternalServerError)
 def handle_500(err):
     return jsonify({"message": f"It's not you, it's us"}), 500
 
