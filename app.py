@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
+from werkzeug import exceptions
 
 app = Flask(__name__)
 
@@ -37,6 +38,13 @@ def result():
         print(bmr)
     return render_template('base.html', form_data = form_data), 200
 
+@app.errorrhandler(exceptions.NotFound)
+def handle_404(err):
+    return jsonify({"message": f"Sorry... {err}"}), 404
+
+@app.errorrhandler(exceptions.InternalServerError)
+def handle_500(err):
+    return jsonify({"message": f"It's not you, it's us"}), 500
 
 if __name__ == '__main__':
     app.run()
