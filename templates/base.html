@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TDEE Calculator</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
+
 <body>
-    <h1>Total Daily Energy Expenditure</h1>
-    <em>Learn How Many Calories You Burn Every Day</em>
+    <div id="title">
+        <h1>Total Daily Energy Expenditure</h1>
+        <em>Learn How Many Calories You Burn Every Day</em>
+    </div>
+
     {% block content %}
     {% endblock content %}
     <form action="/result" method="POST">
-        <label for="age">Age : </label>
+        <label for="age">Age </label>
         <input type="text" name="age" id="age" placeholder="Your age" required>
-        <label for="weight">Weight : </label>
+        <label for="weight">Weight</label>
         <input type="text" name="weight" id="weight" placeholder="(kg)" required>
-        <label for="height">Height : </label>
+        <label for="height">Height</label>
         <input type="text" name="height" id="height" placeholder="(cm)" required>
-        <label for="activity">Activity Levels: </label>
+        <label for="activity">Activity Levels</label>
         <select name="activity" id="activity">
             <option value="sedentary">Sedentary (office job)</option>
             <option value="le">Lightly Exercise (1-2 / week)</option>
@@ -26,7 +32,8 @@
             <option value="he">Heavy Exercise (6-7 / week ) </option>
             <option value="athlete">Athlete (2x per day) </option>
         </select>
-        <input type="submit" value="submit">
+        <input type="submit" value="Submit" id="submit">
     </form>
 </body>
+
 </html>
