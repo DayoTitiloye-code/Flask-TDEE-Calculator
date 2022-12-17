@@ -11,5 +11,22 @@
     <em>Learn How Many Calories You Burn Every Day</em>
     {% block content %}
     {% endblock content %}
+    <form action="" method="POST">
+        <label for="age">Age : </label>
+        <input type="text" name="age" id="age" placeholder="Your age" required>
+        <label for="weight">Weight : </label>
+        <input type="text" name="weight" id="weight" placeholder="(kg)" required>
+        <label for="height">Height : </label>
+        <input type="text" name="height" id="height" placeholder="(cm)" required>
+        <label for="activity">Activity Levels: </label>
+        <select name="activity" id="activity">
+            <option value="sedentary">Sedentary (office job)</option>
+            <option value="le">Lightly Exercise (1-2 / week)</option>
+            <option value="me">Moderately Exercise (3-5 / week)</option>
+            <option value="he">Heavy Exercise (6-7 / week ) </option>
+            <option value="athlete">Athlete (2x per day) </option>
+        </select>
+        <input type="submit" value="submit">
+    </form>
 </body>
 </html>
