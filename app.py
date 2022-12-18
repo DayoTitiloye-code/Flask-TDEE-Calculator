@@ -51,7 +51,7 @@ def result():
         calc = Results(calculation)
         db.session.add(calc)
         db.session.commit()
-    return render_template('base.html', form_data = form_data), 200
+    return render_template('result.html', form_data = form_data, calculation=calculation), 200
 
 @app.route('/view')
 def view():

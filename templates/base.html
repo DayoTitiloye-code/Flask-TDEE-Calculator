@@ -10,13 +10,10 @@
 </head>
 
 <body>
-    <div id="title">
+    <div class="title">
         <h1>Total Daily Energy Expenditure</h1>
         <em>Learn How Many Calories You Burn Every Day</em>
     </div>
-
-    {% block content %}
-    {% endblock content %}
     <form action="/result" method="POST">
         <label for="age">Age </label>
         <input type="text" name="age" id="age" placeholder="Your age" required>
