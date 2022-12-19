@@ -48,10 +48,15 @@ def result():
             case 'athlete':
                 calculation = int(bmr * 1.9)
         print(bmr)
+        weight_loss_1 = int(calculation - 300.0)
+        weight_loss_2 = int(calculation - 500.0)
+        weight_gain_1 = int(calculation + 300.0)
+        weight_gain_2 = int(calculation + 500.0)
+
         calc = Results(calculation)
         db.session.add(calc)
         db.session.commit()
-    return render_template('result.html', form_data = form_data, calculation=calculation), 200
+    return render_template('result.html', form_data = form_data, calculation=calculation, wl1=weight_loss_1, wl2 = weight_loss_2, wg1 = weight_gain_1, wg2 =weight_gain_2), 200
 
 @app.route('/view')
 def view():
