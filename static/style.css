@@ -5,6 +5,7 @@ body{
     margin: 0;
     font-family: 'Work Sans', sans-serif;
     background-color: #F3EFE0;
+    overflow-x: hidden;
 }
 
 #title{
@@ -67,3 +68,44 @@ form #submit:hover{
     transition: 2s;
 }
 
+.tdee-result{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    width: 100vw;
+    margin-top: 100px;
+}
+#base{
+    text-align: center;
+    /* border: 1px solid red; */
+    padding: 30px 130px;
+    background-color: #FED049;
+    border-radius: 5px;
+}
+#wl{
+    text-align: center;
+    /* border: 1px solid red; */
+    padding: 30px 20px;
+    background-color: #FED049;
+    border-radius: 5px;
+
+}
+/* #wl h2{
+    font-size: 15px;
+} */
+#wg{
+    text-align: center;
+    /* border: 1px solid red; */
+    padding: 30px 20px;
+    background-color: #FED049;
+    border-radius: 5px;
+}
+
+/* .cals{
+    color: white;
+} */
+.break{
+    color: black;
+}

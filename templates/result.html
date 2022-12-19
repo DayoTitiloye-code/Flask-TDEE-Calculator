@@ -2,19 +2,19 @@
 
 {% block content %}
 <div class="tdee-result">
-    <div class="normal">
-        <h2>Your TDEE is</h2>
-        <h3>{{calculation}}</h3>
+    <div id="wl">
+        <h3>A healthy range of weight loss is between</h3>
+        <h3 class="cals">{{wl1}} - {{wl2}}</h3>
         <em>calories per day</em>
     </div>
-    <div id="wl">
-        <h2>A healthy range of weight loss is between</h2>
-        <h3>{{wl1}} - {{wl2}}</h3>
+    <div id="base">
+        <h2>Your TDEE is</h2>
+        <h3 class="cals">{{calculation}}</h3>
         <em>calories per day</em>
     </div>
     <div id="wg">
-        <h2>A healthy range of weight gain is between</h2>
-        <h3>{{wg1}} - {{wg2}}</h3>
+        <h3>A healthy range of weight gain is between</h3>
+        <h3 class="cals">{{wg1}} - {{wg2}}</h3>
         <em>calories per day</em>
     </div>
 </div>
